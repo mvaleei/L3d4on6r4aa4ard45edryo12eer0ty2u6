@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        function somma(x, y) {
+            return x + y
+        }
+
+        function sottrai(x, y) {
+            return y - x
+        }
+
+
+        function dividi(x, y) {
+            return y / x
+        }
+
+        function moltiplica(x, y) {
+            return x * y
+        }
+
+
+        function calcola(x, y, funzionaCallBack) {
+            return funzionaCallBack(x, y)
+        }
+
+        alert(calcola(10, 20, somma))
+        alert(calcola(10, 20, sottrai))
+        alert(calcola(10, 20, dividi))
+        alert(calcola(10, 20, moltiplica))
+
+
+    </script>
+
+
+
+</body>
+
+</html>

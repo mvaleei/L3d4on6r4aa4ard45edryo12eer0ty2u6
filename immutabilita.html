@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        var anni = [10, 20, 30]
+
+
+        var anninew = anni;
+
+        anninew[0] = 99
+
+        //console.log(anninew)
+        //console.log(anni)
+
+        var persona = {
+            nome: "carmelo",
+            anni: 50,
+            citta: "Roma"
+        }
+
+        var persona2 = persona
+        persona2.citta = "Firenze"
+
+        //console.log(persona);
+
+        //immutabilità degli array
+        var nuoviAnni = [...anni, 100];
+
+        //console.log(nuoviAnni)
+        //console.log(anni);
+
+
+        //immutabilità degli oggetti json
+        function cambia(persona, nuovaCitta) {
+            return Object.assign(
+                {},
+                persona,
+                {
+                    citta: nuovaCitta
+                }
+            )
+        }
+
+        var nuovaPersona = cambia(persona, "Bari");
+
+        console.log(persona)
+        console.log(nuovaPersona);
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

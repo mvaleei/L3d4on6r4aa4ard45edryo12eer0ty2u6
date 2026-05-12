@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        var anagrafica = [
+            { nome: "Mario", Cognome: "Rossi", anni: 18 },
+            { nome: "Giorgio", Cognome: "Verdi", anni: 41 },
+            { nome: "Carlo", Cognome: "Bianchi", anni: 33 }
+        ]
+
+        //anagrafica=15;
+
+        var filtrati = anagrafica.filter(
+            //(people) => { return people.anni > 35 }
+            (people) => people.anni < 25
+        )
+        //console.log(filtrati);  
+
+        var datiMappati = anagrafica.map(
+            (people) => {
+                return {
+                    nominativo: people.nome + "-" + people.Cognome,
+                    tipologia: people.anni > 17 ? "Maggiorenne" : "Minorenne"
+                }
+            }
+        )
+
+        console.log(datiMappati);
+
+
+
+    </script>
+
+</body>
+
+</html>
