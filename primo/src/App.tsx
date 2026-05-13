@@ -7,11 +7,14 @@ import { Arrow } from './Componenti/Arrow'
 
 import { Condizione } from './Componenti/Condizione'
 
+import { Struttura2 } from './Componenti/Struttura2'
+
 function App() {
 
   return (
     <div>
       <label htmlFor="">Ciao</label>
+      <Struttura2></Struttura2>
       <Mia></Mia>
       <Anonima></Anonima>
       <Arrow></Arrow>

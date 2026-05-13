@@ -2,27 +2,24 @@ import React, { useState } from "react";
 
 import type { Persona } from "../Interfacce/Persona";
 
-const celeste: any = {
-    backgroundColor: 'green',
+const verde: any = {
+    backgroundColor: 'cyan',
     width: '80%'
 }
 
-export const Struttura = () => {
-
-
-
-    const inserito: Persona = {
-        id: 0,
-        nome: "",
-        cognome: "",
-        anni: 0
-    }
-
+export const Struttura2 = () => {
 
     const [
-        nuovaPersona,
-        setNuovaPersona
-    ] = useState<Persona>(inserito)
+        nome, setNome
+    ] = useState<string>("")
+
+    const [
+        cognome, setCognome
+    ] = useState<string>("")
+
+    const [
+        anni, setAnni
+    ] = useState<number>(0)
 
 
     const anagrafica: Array<Persona> = [
@@ -53,7 +50,7 @@ export const Struttura = () => {
 
 
     return (
-        <div style={celeste}>
+        <div style={verde}>
             <h1>Componente principale per gli Array</h1>
             <table border={1}>
                 <tr>
@@ -63,21 +60,7 @@ export const Struttura = () => {
                             type="text"
                             onChange={
                                 (digitato: any) => {
-
-                                    //creo il nuovo oggetto
-                                    let nuovo: Persona = {
-                                        id: personale.length + 1,
-                                        nome: digitato.target.value,
-                                        cognome: nuovaPersona.cognome,
-                                        anni: nuovaPersona.anni
-                                    }
-                                    /*
-                                    nuovaPersona.nome = "giorgio";
-                                    console.log(nuovaPersona)
-                                    */
-                                    setNuovaPersona(nuovo);
-                                    console.log(nuovaPersona)
-
+                                    setNome(digitato.target.value)
                                 }
                             }
                         />
@@ -90,20 +73,7 @@ export const Struttura = () => {
                             type="text"
                             onChange={
                                 (digitato: any) => {
-
-                                    //creo il nuovo oggetto
-                                    let nuovo: Persona = {
-                                        id: personale.length + 1,
-                                        nome: nuovaPersona.nome,
-                                        cognome: digitato.target.value,
-                                        anni: nuovaPersona.anni
-                                    }
-                                    /*
-                                    nuovaPersona.nome = "giorgio";
-                                    console.log(nuovaPersona)
-                                    */
-                                    setNuovaPersona(nuovo);
-                                    console.log(nuovaPersona)
+                                    setCognome(digitato.target.value)
 
                                 }
                             }
@@ -117,21 +87,7 @@ export const Struttura = () => {
                             type="number"
                             onChange={
                                 (digitato: any) => {
-
-                                    //creo il nuovo oggetto
-                                    let nuovo: Persona = {
-                                        id: personale.length + 1,
-                                        nome: nuovaPersona.nome,
-                                        cognome: nuovaPersona.cognome,
-                                        anni: digitato.target.value
-                                    }
-                                    /*
-                                    nuovaPersona.nome = "giorgio";
-                                    console.log(nuovaPersona)
-                                    */
-                                    setNuovaPersona(nuovo);
-                                    console.log(nuovaPersona)
-
+                                    setAnni(digitato.target.value)
                                 }
                             }
                         />
@@ -142,9 +98,15 @@ export const Struttura = () => {
                         <button
                             onClick={
                                 () => {
-                                    setPersonale([...personale, nuovaPersona])
-                                    //console.log(nuovaPersona)
 
+                                    let nuovo: Persona = {
+                                        id: personale.length + 1,
+                                        nome: nome,
+                                        cognome: cognome,
+                                        anni: anni
+                                    }
+                                    setPersonale([...personale, nuovo])
+                                    //console.log(nuovaPersona)
                                 }
                             }
                         >Registra</button>

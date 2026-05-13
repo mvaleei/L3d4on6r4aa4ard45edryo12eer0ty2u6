@@ -10,9 +10,12 @@ import { Inserisci } from './Componenti/Inserisci.tsx'
 
 import { Struttura } from './Componenti/Struttura.tsx'
 
+import { Padre } from './Componenti/Gerarchia/PadreToFiglio/Padre.tsx'
+
 
 createRoot(document.getElementById('root')!).render(
   <div>
+    <Padre></Padre>
     <Struttura></Struttura>
     <App />
     <Mia></Mia>
