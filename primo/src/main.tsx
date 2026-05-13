@@ -13,8 +13,15 @@ import { Struttura } from './Componenti/Struttura.tsx'
 import { Padre } from './Componenti/Gerarchia/PadreToFiglio/Padre.tsx'
 
 
+import { Listato } from './Componenti/Gerarchia/Listato.tsx'
+
+import { PadreRicevi } from './Componenti/Gerarchia/FiglioToPadre/PadreRicevi.tsx'
+
+
 createRoot(document.getElementById('root')!).render(
   <div>
+    <PadreRicevi></PadreRicevi>
+    <Listato></Listato>
     <Padre></Padre>
     <Struttura></Struttura>
     <App />
