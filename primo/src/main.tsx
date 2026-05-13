@@ -8,8 +8,12 @@ import { Comp1, Comp2, Comp3 } from './Componenti/Multi.tsx'
 import { Inserisci } from './Componenti/Inserisci.tsx'
 
 
+import { Struttura } from './Componenti/Struttura.tsx'
+
+
 createRoot(document.getElementById('root')!).render(
   <div>
+    <Struttura></Struttura>
     <App />
     <Mia></Mia>
     <Comp1></Comp1>

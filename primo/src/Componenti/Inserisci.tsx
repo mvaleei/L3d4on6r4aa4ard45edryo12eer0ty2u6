@@ -46,6 +46,7 @@ export const Inserisci = () => {
                 onChange={
                     (oggettoScatenante: any) => {
                         setNome(oggettoScatenante.target.value)
+                        console.log(nome);
                     }
                 }
             />
